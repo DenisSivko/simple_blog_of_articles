@@ -14,11 +14,14 @@ git clone `https://github.com/DenisSivko/simple_blog_of_articles.git`
 
 `go run main.go`
 
-## Примеры
+## Пример
+##### MAMP
+
+Для локального сервера и хранения данных о статьях была использована программа [MAMP](https://www.mamp.info/en/windows/). Структура представлена ниже:
+![mamp_image](https://i.ibb.co/CVj2GnX/mamp.png)
+![mamp2_image](https://i.ibb.co/Ch7hVJ8/mamp-prog.png)
+
 ##### Добавляем новую статью
-
-Для локального сервера и хранения данных о статьях была использована программа [MAMP](https://www.mamp.info/en/windows/).
-
 Переходим на адрес `http://127.0.0.1:8000/create/`
 
 ![create_image](https://i.ibb.co/BZd3tYq/post.png)
