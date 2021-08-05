@@ -44,10 +44,6 @@ func index(w http.ResponseWriter, r *http.Request) {
 	tmpl.ExecuteTemplate(w, "index", posts)
 }
 
-func contacts(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Contacts page!")
-}
-
 func create(w http.ResponseWriter, r *http.Request) {
 	tmpl, err := template.ParseFiles("templates/create.html", "templates/footer.html", "templates/header.html")
 	if err != nil {
@@ -109,7 +105,6 @@ func handleFunc() {
 	rtr.HandleFunc("/", index).Methods("GET")
 	rtr.HandleFunc("/create/", create).Methods("GET")
 	rtr.HandleFunc("/save_article/", save_article).Methods("POST")
-	rtr.HandleFunc("/contacts/", contacts).Methods("GET")
 	rtr.HandleFunc("/post/{id:[0-9]+}", show_post).Methods("GET")
 	http.Handle("/", rtr)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static/"))))
